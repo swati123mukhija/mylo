@@ -1,0 +1,75 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="mylo.css"/>
+<script src="mylo.js"></script>
+<script
+      src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap&libraries=&v=weekly"
+      async
+    ></script>
+</head>
+<body class="newTheme">
+  <div class="container">
+    <div class="beHeading"> 
+      <h1 class="fs20 mb20"><span class="mobile-be-heading"> 
+        <img src="arrow-back.png"/><strong> Save</strong> <strong>Your</strong> <strong>Address</strong> </span>
+      </h1>
+    </div>
+    <section class="addre clr">
+    <h3>address</h3>
+    <div class="locationgeo">
+    <button class="location"><img src="location-icon.png"/>Use My Current Location</button>
+    <p>Tap to auto fill address fields</p>
+  </div>
+    <form id="shippingAddress" name="RegForm" onsubmit="return validateFields()" method="post" autocomplete="off" action="#">
+      <div class="locationList">
+      <div class="input-field">
+        <input value=""  oninput="numberOnly(this.id);" maxlength= "6" type="text" placeholder="Pin Code*" id="pincode" class="sme-txt-box sme-select-medium required_field" 
+                              name="pincode"/>
+      </div>
+      <div class="input-field">
+       <input value="" type="text" placeholder="Flat/ House No./Floor/Building*" id="flat" class="sme-txt-box sme-select-medium required_field" 
+                              name="flat"/>
+      </div>
+      <div class="input-field">
+       <input value="" type="text" placeholder="Colony/ Street/ Locality*" id="locality" class="sme-txt-box sme-select-medium required_field" 
+                              name="locality"/>
+      </div>
+      <div class="input-field">
+        <input type="checkbox" class="sme-text-center fs-16 mr10" id="checkbox"><label>Save this as default address</label>
+      </div>
+</div>
+      <h3>contact details</h3>
+      <div class="locationList">
+      <div class="input-field">
+        <input type="text"  placeholder="Full Name*" id="fullName" class="sme-txt-box required_field" name="fullName" data-errormsg="Please enter Full Name"/>
+      </div>
+      <div class="input-field">
+          <input type="text" class="sme-txt-box sme-select-medium sme-isd-input required_field"
+                                 name="phoneNo" maxlength= "10" data-regtype= "mobile" id="phoneNo" placeholder="Mobile Number" data-errormsg="Please enter mobile number" oninput="numberOnly(this.id);"/>
+      </div>
+    </div>
+    <div class="footer-icons">
+      <div class="dFlex">
+      <img src="icon.png" alt="moms"/>
+      <span>10 lakh+ Moms<br/> Trust MYLO</span>
+    </div>
+    <div class="dFlex">
+      <img src="icon1.png" alt="moms"/>
+      <span>Contactless<br/> Delivery</span>
+    </div>
+    <div class="dFlex">
+      <img src="icon2.png" alt="moms"/>
+      <span>Delivering<br/> Happiness to you</span>
+    </div>
+  </div>
+  <div class="Save-button-docked fbd-without p5"> 
+    <button class=" btn btn-red txt-upper fs14" type="submit" onclick="">SAVE AND CONTINUE</button> </div>
+    <div class="errors">
+    </div>
+             </form>
+           </section>
+         </div>
+  </body>
+</html>
